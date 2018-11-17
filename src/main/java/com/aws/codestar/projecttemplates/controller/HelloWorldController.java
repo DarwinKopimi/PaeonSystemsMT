@@ -39,7 +39,7 @@ public class HelloWorldController {
 	 }
 	 
 	 PatientDataMapper dp = new PatientDataMapper();
-	 @JsonCreator
+	 
 		@RequestMapping(value="/users",method = RequestMethod.GET)
 		    public List<Patient> allPatient() {
 		     List<Patient> patients = null;
