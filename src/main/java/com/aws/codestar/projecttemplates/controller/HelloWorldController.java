@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.ps.webservice.data.Patient;
 import com.ps.webservice.data.mapper.PatientDataMapper;
 
@@ -38,6 +39,7 @@ public class HelloWorldController {
 	 }
 	 
 	 PatientDataMapper dp = new PatientDataMapper();
+	 @JsonCreator
 		@RequestMapping(value="/users",method = RequestMethod.GET)
 		    public List<Patient> allPatient() {
 		     List<Patient> patients = null;
