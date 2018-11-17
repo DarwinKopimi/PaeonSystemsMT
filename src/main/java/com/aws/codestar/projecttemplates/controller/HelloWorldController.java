@@ -24,5 +24,10 @@ public class HelloWorldController {
         mav.addObject("siteName", this.siteName);
         return mav;
     }
+    
+	 @RequestMapping(value="/hello", method = RequestMethod.GET)
+	 public String helloWorld2() {
+	 	  return  "Hello World";
+	 }
 
 }
