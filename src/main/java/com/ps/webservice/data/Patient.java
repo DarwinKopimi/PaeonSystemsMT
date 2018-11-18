@@ -5,14 +5,11 @@ package com.ps.webservice.data;
 
 public class Patient  {
 	
-	private String Id;
 	private String firstName;
 	private String lastName;
 	private String DateOfBirth;
 	private int age;
 	private String HealthInsurance;
-	private String userName;
-	private String password;
 	
 	public String getFirstName() {
 		return firstName;
@@ -65,13 +62,5 @@ public class Patient  {
 		HealthInsurance = healthInsurance;
 	}
 
-
-	
-	
-
-	public void login(String userName, String password) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
