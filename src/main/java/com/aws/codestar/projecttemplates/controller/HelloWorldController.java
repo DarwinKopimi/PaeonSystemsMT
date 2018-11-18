@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -41,6 +42,7 @@ public class HelloWorldController {
 	 PatientDataMapper dp = new PatientDataMapper();
 	 
 		@SuppressWarnings("unchecked")
+		@ResponseBody
 		@RequestMapping(value="/users",method = RequestMethod.GET)
 		    public List<Patient> allPatient() {
 		     List<Patient> patients = null;
@@ -53,7 +55,7 @@ public class HelloWorldController {
 		     if(patients ==null || patients.isEmpty()) {
 		    	 System.out.println(HttpStatus.BAD_REQUEST + "Hit Endpoint"); ;
 		     }
-			 return (List<Patient>) new ResponseEntity (patients, HttpStatus.OK);
+			 return patients;
 		    }
 
 }
