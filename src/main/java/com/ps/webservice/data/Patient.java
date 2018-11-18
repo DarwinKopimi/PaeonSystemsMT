@@ -1,6 +1,5 @@
 package com.ps.webservice.data;
 
-import java.util.List;
 
 
 
